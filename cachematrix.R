@@ -2,10 +2,10 @@
 ## This file consists of two functions, used to calculate the
 ## inverse of a matrix and store it in the cache. Caching is used
 ## for time-consuming computations, such as matrix inversions,
-## especially when the computation (e.g. inverse) would otherwise
-## be evaluated repeatedly.
+## especially when the computation (e.g. matrix inverse) would
+## otherwise be evaluated repeatedly.
 
-## The first function, makeCacheMatrix, creates a special "matrix",
+## The first function, makeCacheMatrix, creates a special "vector",
 ## which is really a list containing a function to
 ## 1. set the value of the matrix
 ## 2. get the value of the matrix
@@ -43,7 +43,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## The following function calculates the inverse of the special
-## "matrix" created with the above function (makeCacheMatrix).
+## "vector" created with the above function (makeCacheMatrix).
 ## However, it first checks to see if the inverse has already been
 ## calculated. If so, it gets the inverse from the cache and skips
 ## the computation. Otherwise, it calculates the inverse of the
